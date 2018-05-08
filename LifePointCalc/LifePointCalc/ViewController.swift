@@ -19,20 +19,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var setLifePoint2: UIButton!
     @IBOutlet weak var setLifePoint3: UIButton!
     
+    var playersNum = 0
+    var lifePointTemp = 1
+    
+    
     @IBAction func PlayersTwo(_ sender: Any) {
         setlifepoint1.isHidden = false
         setLifePoint2.isHidden = false
         setLifePoint3.isHidden = false
+        playersNum = 2
+        lifePointTemp = 1
     }
     @IBAction func PlayersThree(_ sender: Any) {
         setlifepoint1.isHidden = false
         setLifePoint2.isHidden = false
         setLifePoint3.isHidden = false
+        playersNum = 3
+        lifePointTemp = 2
     }
     @IBAction func PlayerFour(_ sender: Any) {
         setlifepoint1.isHidden = false
         setLifePoint2.isHidden = false
         setLifePoint3.isHidden = false
+        playersNum = 4
+        lifePointTemp = 3
     }
     
     

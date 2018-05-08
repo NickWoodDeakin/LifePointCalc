@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="IIX-on-JQH">
             <objects>
-                <viewController id="Ipg-9e-LrQ" sceneMemberID="viewController">
+                <viewController id="Ipg-9e-LrQ" customClass="mainViewController" customModule="LifePointCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6DE-Yw-vxb">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                 <state key="normal" title="8000"/>
                                 <connections>
                                     <action selector="SetLifePoints8000:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-3E-HHX"/>
-                                    <segue destination="Ipg-9e-LrQ" kind="show" id="Ova-9b-QIY"/>
+                                    <segue destination="Ipg-9e-LrQ" kind="show" identifier="lifePoints1Seg" id="Ova-9b-QIY"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-l4-TSX">
@@ -49,7 +49,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="20"/>
                                 <connections>
-                                    <segue destination="Ipg-9e-LrQ" kind="show" id="aoS-mm-wbR"/>
+                                    <segue destination="Ipg-9e-LrQ" kind="show" identifier="lifePoints3Seg" id="aoS-mm-wbR"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XS-gy-ADN">
@@ -58,7 +58,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Custom"/>
                                 <connections>
-                                    <segue destination="Ipg-9e-LrQ" kind="show" id="d5C-ag-XwU"/>
+                                    <segue destination="Ipg-9e-LrQ" kind="show" identifier="lifePoints2Seg" id="d5C-ag-XwU"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starting life points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opb-1S-2nX">
@@ -118,6 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="99" y="118"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
