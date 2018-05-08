@@ -39,6 +39,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="8000"/>
                                 <connections>
+                                    <action selector="LifePointStartOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ob-Tj-lDX"/>
                                     <action selector="SetLifePoints8000:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-3E-HHX"/>
                                     <segue destination="Ipg-9e-LrQ" kind="show" identifier="lifePoints1Seg" id="Ova-9b-QIY"/>
                                 </connections>
@@ -49,6 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="20"/>
                                 <connections>
+                                    <action selector="LifePointStartTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jai-vT-yPQ"/>
                                     <segue destination="Ipg-9e-LrQ" kind="show" identifier="lifePoints3Seg" id="aoS-mm-wbR"/>
                                 </connections>
                             </button>
@@ -58,6 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Custom"/>
                                 <connections>
+                                    <action selector="LifePointStartThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tp3-jp-Vv2"/>
                                     <segue destination="Ipg-9e-LrQ" kind="show" identifier="lifePoints2Seg" id="d5C-ag-XwU"/>
                                 </connections>
                             </button>
@@ -111,6 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="LifeLabel" destination="Opb-1S-2nX" id="uOW-8d-gfR"/>
                         <outlet property="setLifePoint2" destination="ZNU-l4-TSX" id="XMH-np-hs8"/>
                         <outlet property="setLifePoint3" destination="5XS-gy-ADN" id="F2f-2h-aP3"/>
                         <outlet property="setlifepoint1" destination="Gjx-pV-96N" id="gF1-iJ-T6w"/>

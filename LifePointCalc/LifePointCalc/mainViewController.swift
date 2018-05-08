@@ -15,6 +15,9 @@ class mainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    var players = 1
+    var startingLifePoints = 1
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
