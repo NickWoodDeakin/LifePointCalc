@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NV-9D-Shk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-576" y="262"/>
+            <point key="canvasLocation" x="-552" y="118"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -40,6 +40,7 @@
                                 <state key="normal" title="8000"/>
                                 <connections>
                                     <action selector="SetLifePoints8000:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-3E-HHX"/>
+                                    <segue destination="Ipg-9e-LrQ" kind="show" id="Ova-9b-QIY"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-l4-TSX">
@@ -47,12 +48,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="20"/>
+                                <connections>
+                                    <segue destination="Ipg-9e-LrQ" kind="show" id="aoS-mm-wbR"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XS-gy-ADN">
                                 <rect key="frame" x="405" y="294" width="69" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Custom"/>
+                                <connections>
+                                    <segue destination="Ipg-9e-LrQ" kind="show" id="d5C-ag-XwU"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starting life points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opb-1S-2nX">
                                 <rect key="frame" x="263" y="266" width="157" height="24"/>
@@ -113,4 +120,7 @@
             </objects>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ova-9b-QIY"/>
+    </inferredMetricsTieBreakers>
 </document>
