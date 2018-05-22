@@ -14,6 +14,8 @@
 		3C05810220A1ABF600184FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C05810020A1ABF600184FBA /* LaunchScreen.storyboard */; };
 		3C05810D20A1ABF600184FBA /* LifePointCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05810C20A1ABF600184FBA /* LifePointCalcTests.swift */; };
 		3C05811820A1ABF600184FBA /* LifePointCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05811720A1ABF600184FBA /* LifePointCalcUITests.swift */; };
+		3C05812620A1C5F600184FBA /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05812520A1C5F600184FBA /* mainViewController.swift */; };
+		EA9BE36F20B432170014450F /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9BE36E20B432170014450F /* RandomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3C05811320A1ABF600184FBA /* LifePointCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifePointCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C05811720A1ABF600184FBA /* LifePointCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePointCalcUITests.swift; sourceTree = "<group>"; };
 		3C05811920A1ABF700184FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C05812520A1C5F600184FBA /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		EA9BE36E20B432170014450F /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 				3C0580F720A1ABE900184FBA /* AppDelegate.swift */,
 				3C0580F920A1ABE900184FBA /* ViewController.swift */,
 				3C0580FB20A1ABE900184FBA /* Main.storyboard */,
+				3C05812520A1C5F600184FBA /* mainViewController.swift */,
 				3C0580FE20A1ABF600184FBA /* Assets.xcassets */,
 				3C05810020A1ABF600184FBA /* LaunchScreen.storyboard */,
 				3C05810320A1ABF600184FBA /* Info.plist */,
+				EA9BE36E20B432170014450F /* RandomViewController.swift */,
 			);
 			path = LifePointCalc;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0580FA20A1ABE900184FBA /* ViewController.swift in Sources */,
+				EA9BE36F20B432170014450F /* RandomViewController.swift in Sources */,
 				3C0580F820A1ABE900184FBA /* AppDelegate.swift in Sources */,
+				3C05812620A1C5F600184FBA /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
