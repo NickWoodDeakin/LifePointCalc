@@ -35,6 +35,16 @@ class RandomViewController: UIViewController {
     @IBAction func backButtonPress(_ sender: Any) {
         performSegue(withIdentifier: "toMainFromRandom", sender: nil)
     }
+    
+    func Random(_ a: Int, _ b: Int) -> [Int] {
+        let num = a
+        let sides = b
+        var result = [Int]()
+        for _ in 1..<num {
+            result.append(Int(arc4random_uniform(UInt32(sides))))
+        }
+        return result
+    }
    
     /*
      // MARK: - Navigation
