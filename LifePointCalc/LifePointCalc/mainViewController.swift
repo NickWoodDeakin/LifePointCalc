@@ -2,7 +2,7 @@
 //  mainViewController.swift
 //  LifePointCalc
 //
-//  Created by MM02 minimac on 8/5/18.
+//  Created by Nicholas Pilkington and Nicholas Wood on 8/5/18.
 //  Copyright © 2018 Deakin. All rights reserved.
 //
 
@@ -26,7 +26,6 @@ class mainViewController: UIViewController {
     
     @IBOutlet weak var diceButton: UIButton!
     @IBOutlet weak var coinButton: UIButton!
-    
     
     @IBAction func diceButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 0

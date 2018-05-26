@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  LifePointCalc
 //
-//  Created by MM02 minimac on 8/5/18.
+//  Created by Nicholas Pilkington and Nicholas Wood on 8/5/18.
 //  Copyright © 2018 Deakin. All rights reserved.
 //
 
@@ -55,11 +55,11 @@ class ViewController: UIViewController {
         lifePointTemp = 1
     }
     @IBAction func LifePointStartTwo(_ sender: Any) {
-      performSegue(withIdentifier: "lifePointsSeg", sender: nil)
+        performSegue(withIdentifier: "lifePointsSeg2", sender: nil)
         lifePointTemp = 2
     }
     @IBAction func LifePointStartThree(_ sender: Any) {
-        performSegue(withIdentifier: "lifePointsSeg", sender: nil)
+    performSegue(withIdentifier: "lifePointsSeg3", sender: nil)
         lifePointTemp = 3
     }
     
