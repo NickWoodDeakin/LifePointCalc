@@ -102,11 +102,13 @@
                     <connections>
                         <outlet property="coinButton" destination="hO1-jZ-BUz" id="ZjT-OA-gOo"/>
                         <outlet property="diceButton" destination="jrb-fW-iFO" id="fw5-cM-NHu"/>
+                        <segue destination="1t2-95-WYu" kind="show" identifier="toRandomFromMain" id="T8L-yd-4YU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toStartFromMain" id="nJp-SE-oGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NV-9D-Shk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535.68215892053979" y="117.59999999999999"/>
+            <point key="canvasLocation" x="-657" y="118"/>
         </scene>
         <!--Random View Controller-->
         <scene sceneID="BDd-84-nbl">
@@ -138,11 +140,12 @@
                     <connections>
                         <outlet property="TestLabel" destination="HVq-2o-Qrl" id="g2X-zv-M82"/>
                         <outlet property="backButton" destination="iKa-XK-jpo" id="t8A-Et-qcU"/>
+                        <segue destination="Ipg-9e-LrQ" kind="show" identifier="toMainFromRandom" id="imf-i3-XJx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H65-w5-pW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-536" y="887"/>
+            <point key="canvasLocation" x="-657" y="977"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -234,6 +237,7 @@
                         <outlet property="setLifePoint2" destination="ZNU-l4-TSX" id="XMH-np-hs8"/>
                         <outlet property="setLifePoint3" destination="5XS-gy-ADN" id="F2f-2h-aP3"/>
                         <outlet property="setlifepoint1" destination="Gjx-pV-96N" id="gF1-iJ-T6w"/>
+                        <segue destination="Ipg-9e-LrQ" kind="show" identifier="toMainFromStart" id="kMU-bJ-7cw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -241,4 +245,7 @@
             <point key="canvasLocation" x="99" y="118"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="imf-i3-XJx"/>
+    </inferredMetricsTieBreakers>
 </document>
