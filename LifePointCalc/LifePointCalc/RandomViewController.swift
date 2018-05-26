@@ -14,6 +14,13 @@ class RandomViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if ViewController.diceOrCoin == 0{
+            TestLabel.text = "DICE"
+        }
+        else
+        {
+            TestLabel.text = "COIN"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +28,13 @@ class RandomViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBOutlet weak var TestLabel: UILabel!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBAction func backButtonPress(_ sender: Any) {
+        performSegue(withIdentifier: "backFromRandom", sender: nil)
+    }
     /*
     // MARK: - Navigation
 

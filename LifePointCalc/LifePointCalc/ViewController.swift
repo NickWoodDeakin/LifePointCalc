@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var setLifePoint3: UIButton!
     @IBOutlet weak var LifeLabel: UILabel!
     
-    
+    static var diceOrCoin = 0 //Dice = 0, Coin = 1. This determines whether to render coins or dice in the RandomViewController.
+
     
     var playersNum = 0
     var lifePointTemp = 1
@@ -50,13 +51,15 @@ class ViewController: UIViewController {
     }
     @IBAction func LifePointStartOne(_ sender: Any) {
       //var mainController = lifePoints1Seg.destination as! mainViewController
-        performSegue(withIdentifier: "lifePoints1Seg", sender: nil)
+        performSegue(withIdentifier: "lifePointsSeg", sender: nil)
         lifePointTemp = 1
     }
     @IBAction func LifePointStartTwo(_ sender: Any) {
+      performSegue(withIdentifier: "lifePointsSeg", sender: nil)
         lifePointTemp = 2
     }
     @IBAction func LifePointStartThree(_ sender: Any) {
+        performSegue(withIdentifier: "lifePointsSeg", sender: nil)
         lifePointTemp = 3
     }
     

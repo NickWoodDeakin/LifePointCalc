@@ -28,6 +28,16 @@ class mainViewController: UIViewController {
     @IBOutlet weak var coinButton: UIButton!
     
     
+    @IBAction func diceButtonPress(_ sender: Any) {
+        ViewController.diceOrCoin = 0
+        
+        performSegue(withIdentifier: "RandomSeg", sender: nil)
+    }
+    
+    @IBAction func coinButtonPress(_ sender: Any) {
+        ViewController.diceOrCoin = 1
+        performSegue(withIdentifier: "RandomSeg", sender: nil)
+    }
     /*
     // MARK: - Navigation
 
