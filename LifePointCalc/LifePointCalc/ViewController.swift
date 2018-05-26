@@ -51,15 +51,15 @@ class ViewController: UIViewController {
     }
     @IBAction func LifePointStartOne(_ sender: Any) {
       //var mainController = lifePoints1Seg.destination as! mainViewController
-        performSegue(withIdentifier: "lifePointsSeg", sender: nil)
+        performSegue(withIdentifier: "toMainFromStart", sender: nil)
         lifePointTemp = 1
     }
     @IBAction func LifePointStartTwo(_ sender: Any) {
-        performSegue(withIdentifier: "lifePointsSeg2", sender: nil)
+        performSegue(withIdentifier: "toMainFromStart", sender: nil)
         lifePointTemp = 2
     }
     @IBAction func LifePointStartThree(_ sender: Any) {
-    performSegue(withIdentifier: "lifePointsSeg3", sender: nil)
+    performSegue(withIdentifier: "toMainFromStart", sender: nil)
         lifePointTemp = 3
     }
     

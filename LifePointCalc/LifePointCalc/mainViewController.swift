@@ -30,12 +30,12 @@ class mainViewController: UIViewController {
     @IBAction func diceButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 0
         
-        performSegue(withIdentifier: "RandomSeg", sender: nil)
+        performSegue(withIdentifier: "toRandomFromMain", sender: nil)
     }
     
     @IBAction func coinButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 1
-        performSegue(withIdentifier: "RandomSeg", sender: nil)
+        performSegue(withIdentifier: "toRandomFromMain", sender: nil)
     }
     /*
     // MARK: - Navigation

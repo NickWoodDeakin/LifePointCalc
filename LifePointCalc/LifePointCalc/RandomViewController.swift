@@ -33,7 +33,7 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
     @IBAction func backButtonPress(_ sender: Any) {
-        performSegue(withIdentifier: "backFromRandom", sender: nil)
+        performSegue(withIdentifier: "toMainFromRandom", sender: nil)
     }
    
     /*

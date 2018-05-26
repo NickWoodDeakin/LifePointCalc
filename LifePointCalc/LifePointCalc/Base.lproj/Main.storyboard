@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,13 +22,16 @@
                                 <rect key="frame" x="530" y="172" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Coin"/>
+                                <connections>
+                                    <action selector="coinButtonPress:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="0hc-ZK-G7W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrb-fW-iFO">
                                 <rect key="frame" x="96" y="172" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Dice"/>
                                 <connections>
-                                    <action selector="diceButtonPress:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="zeu-1q-rQP"/>
+                                    <action selector="diceButtonPress:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="fYl-iK-VYH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN8-HP-gjO">
@@ -100,8 +103,8 @@
                         <viewLayoutGuide key="safeArea" id="qGM-c8-XZd"/>
                     </view>
                     <connections>
-                        <outlet property="coinButton" destination="hO1-jZ-BUz" id="ZjT-OA-gOo"/>
-                        <outlet property="diceButton" destination="jrb-fW-iFO" id="fw5-cM-NHu"/>
+                        <outlet property="coinButton" destination="hO1-jZ-BUz" id="Ihs-Yp-zUG"/>
+                        <outlet property="diceButton" destination="jrb-fW-iFO" id="NDw-kr-u9w"/>
                         <segue destination="1t2-95-WYu" kind="show" identifier="toRandomFromMain" id="T8L-yd-4YU"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toStartFromMain" id="nJp-SE-oGj"/>
                     </connections>
@@ -242,10 +245,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99" y="118"/>
+            <point key="canvasLocation" x="155" y="36"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="imf-i3-XJx"/>
+        <segue reference="kMU-bJ-7cw"/>
     </inferredMetricsTieBreakers>
 </document>
