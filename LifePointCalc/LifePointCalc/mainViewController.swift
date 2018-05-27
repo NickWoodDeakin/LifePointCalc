@@ -79,6 +79,7 @@ class mainViewController: UIViewController {
     @IBOutlet weak var buttonZero: UIButton!
     @IBOutlet weak var buttonMinus: UIButton!
     @IBOutlet weak var buttonPlus: UIButton!
+    @IBOutlet weak var buttonCancel: UIButton!
     
     
     func loadCalc(){
@@ -95,6 +96,7 @@ class mainViewController: UIViewController {
         buttonZero.isHidden = false
         buttonMinus.isHidden = false
         buttonPlus.isHidden = false
+        buttonCancel.isHidden = false
     }
     
     @IBAction func playerCalcOne(_ sender: Any) {

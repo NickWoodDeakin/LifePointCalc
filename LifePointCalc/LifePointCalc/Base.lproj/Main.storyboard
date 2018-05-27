@@ -225,11 +225,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLm-Nh-iOa">
+                                <rect key="frame" x="222" y="290" width="256" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.11075463683790698" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qGM-c8-XZd"/>
                     </view>
                     <connections>
+                        <outlet property="buttonCancel" destination="KLm-Nh-iOa" id="uNt-9a-2ha"/>
                         <outlet property="buttonEight" destination="Fba-ae-o9C" id="NyU-5E-PS2"/>
                         <outlet property="buttonFive" destination="Vbz-mt-aO6" id="970-8S-WkN"/>
                         <outlet property="buttonFour" destination="Tbr-UZ-0zQ" id="FKf-tY-rRK"/>
@@ -384,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H65-w5-pW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-516" y="1282"/>
+            <point key="canvasLocation" x="-657" y="1001"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -484,6 +494,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="T8L-yd-4YU"/>
         <segue reference="imf-i3-XJx"/>
     </inferredMetricsTieBreakers>
 </document>
