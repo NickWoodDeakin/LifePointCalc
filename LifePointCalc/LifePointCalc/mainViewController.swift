@@ -12,11 +12,20 @@ class mainViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
+        playerLifeOne.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[0]], for: .normal)
+        playerLifeTwo.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[1]], for: .normal)
+        playerLifeThree.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[2]], for: .normal)
+        playerLifeFour.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[3]], for: .normal)
+        
         playerOneName.delegate = self
         playerTwoName.delegate = self
         playerThreeName.delegate = self
         playerFourName.delegate = self
         
+        if mainViewController.lpLoaded == false
+        {
         if i == 1{
             print(i)
         playerLifeOne.setTitle("8000", for: .normal)
@@ -65,13 +74,22 @@ class mainViewController: UIViewController, UITextFieldDelegate {
             playerFourName.isHidden = false
             playerLifeFour.isHidden = false
         }
+        }
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     var i = ViewController.lifePointTemp
+
+    
+    
+    @IBOutlet weak var mainBackground: UIImageView!
+
+    static var lpLoaded = false
     var disableBack = 0
     var player = 0
     var lifePointTemp:Double = 0
@@ -106,6 +124,8 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var diceButton: UIButton!
     @IBOutlet weak var coinButton: UIButton!
+    
+    @IBOutlet weak var settingsButton: UIButton!
     
     @IBOutlet weak var displayCalcValue: UILabel!
     @IBOutlet weak var buttonOne: UIButton!
@@ -324,6 +344,14 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "toRandomFromMain", sender: nil)
     }
     
+
+    
+    @IBAction func settingsButtonPress(_ sender: Any) {
+        performSegue(withIdentifier: "toSettingsFromMain", sender: nil)
+    }
+    
+    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

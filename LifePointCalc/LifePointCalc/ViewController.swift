@@ -12,9 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
     }
-   
+    
+    
+    @IBOutlet weak var startBackground: UIImageView!
+    
     @IBOutlet weak var setlifepoint1: UIButton!
     @IBOutlet weak var setLifePoint2: UIButton!
     @IBOutlet weak var setLifePoint3: UIButton!
@@ -22,6 +25,7 @@ class ViewController: UIViewController {
     
     static var diceOrCoin = 0 //Dice = 0, Coin = 1. This determines whether to render coins or dice in the RandomViewController.
 
+    
     static var playersNum = 0
     static var lifePointTemp = 0
     

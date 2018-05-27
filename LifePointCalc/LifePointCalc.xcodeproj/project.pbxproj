@@ -17,6 +17,7 @@
 		3C05812620A1C5F600184FBA /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05812520A1C5F600184FBA /* mainViewController.swift */; };
 		3C9F261C20BB0ED4001AFD87 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F261B20BB0ED4001AFD87 /* historyViewController.swift */; };
 		EA9BE36F20B432170014450F /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9BE36E20B432170014450F /* RandomViewController.swift */; };
+		EAD4B6FA20BB257700B3A9AF /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4B6F920BB257700B3A9AF /* settingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3C05812520A1C5F600184FBA /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		3C9F261B20BB0ED4001AFD87 /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		EA9BE36E20B432170014450F /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		EAD4B6F920BB257700B3A9AF /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3C05810020A1ABF600184FBA /* LaunchScreen.storyboard */,
 				3C05810320A1ABF600184FBA /* Info.plist */,
 				EA9BE36E20B432170014450F /* RandomViewController.swift */,
+				EAD4B6F920BB257700B3A9AF /* settingsViewController.swift */,
 			);
 			path = LifePointCalc;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				3C0580F820A1ABE900184FBA /* AppDelegate.swift in Sources */,
 				3C05812620A1C5F600184FBA /* mainViewController.swift in Sources */,
 				3C9F261C20BB0ED4001AFD87 /* historyViewController.swift in Sources */,
+				EAD4B6FA20BB257700B3A9AF /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

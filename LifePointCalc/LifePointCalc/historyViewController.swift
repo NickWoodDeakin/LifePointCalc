@@ -6,17 +6,24 @@
 //  Copyright © 2018 Deakin. All rights reserved.
 //
 
+
 import UIKit
 
 class historyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
        playerOneVIewHistory.text = mainViewController.playerOneHistory
         playerTwoViewHistory.text = mainViewController.playerTwoHistory
         playerThreeViewHistory.text = mainViewController.playerThreeHistory
         playerFourViewHistory.text = mainViewController.playerFourHistory
         
+
+        historyBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
+
+        // Do any additional setup after loading the view.
+
     }
     static var dubOne:Double = mainViewController.playerOneLifePoints
     static var tempStoreOne = mainViewController.lifePointTwoString
@@ -40,7 +47,8 @@ class historyViewController: UIViewController {
     @IBOutlet weak var playerFourViewHistory: UILabel!
     
     
-
+    @IBOutlet weak var historyBackground: UIImageView!
+    
     /*
     // MARK: - Navigation
 
