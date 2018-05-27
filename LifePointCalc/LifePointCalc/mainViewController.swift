@@ -272,6 +272,9 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func historyView(_ sender: UIButton) {
+        performSegue(withIdentifier: "toHistoryFromMain", sender: nil)
+    }
     
     @IBAction func diceButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 0

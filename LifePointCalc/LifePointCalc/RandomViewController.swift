@@ -34,10 +34,8 @@ class RandomViewController: UIViewController {
             noOfDiceCoinsLabel.text = "Number of Coins"
             Sides = 2
         }
-
             DCImage2.isHidden = true
             DCImage3.isHidden = true
-
     }
     
     override func didReceiveMemoryWarning() {

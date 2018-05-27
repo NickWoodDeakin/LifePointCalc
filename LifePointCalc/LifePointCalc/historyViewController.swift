@@ -2,7 +2,7 @@
 //  historyViewController.swift
 //  LifePointCalc
 //
-//  Created by MM02 minimac on 28/5/18.
+//  Created by Nicholas Pilkington and Nicholas Wood on 28/5/18.
 //  Copyright © 2018 Deakin. All rights reserved.
 //
 
@@ -20,6 +20,11 @@ class historyViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func returnToMain(_ sender: UIButton) {
+        performSegue(withIdentifier: "toMainFromRandom", sender: nil)
+    }
+    
     
 
     /*
