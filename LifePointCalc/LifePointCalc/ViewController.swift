@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     static var diceOrCoin = 0 //Dice = 0, Coin = 1. This determines whether to render coins or dice in the RandomViewController.
 
     static var playersNum = 0
-    static var lifePointTemp = 1
+    static var lifePointTemp = 0
     
     @IBAction func PlayersTwo(_ sender: Any) {
         setlifepoint1.isHidden = false
@@ -49,16 +49,17 @@ class ViewController: UIViewController {
         ViewController.playersNum = 4
     }
     @IBAction func LifePointStartOne(_ sender: Any) {
-        performSegue(withIdentifier: "toMainFromStart", sender: nil)
         ViewController.lifePointTemp = 1
+        performSegue(withIdentifier: "toMainFromStart", sender: nil)
+       
     }
     @IBAction func LifePointStartTwo(_ sender: Any) {
-        performSegue(withIdentifier: "toMainFromStart", sender: nil)
         ViewController.lifePointTemp = 2
+        performSegue(withIdentifier: "toMainFromStart", sender: nil)
     }
     @IBAction func LifePointStartThree(_ sender: Any) {
-    performSegue(withIdentifier: "toMainFromStart", sender: nil)
         ViewController.lifePointTemp = 3
+    performSegue(withIdentifier: "toMainFromStart", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

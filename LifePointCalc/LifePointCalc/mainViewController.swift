@@ -12,32 +12,36 @@ class mainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if ViewController.playersNum == 3{
-            playerNameThree.isHidden = false
-            playerLifeThree.isHidden = false
-        }
-         else if ViewController.playersNum == 4{
-            playerNameFour.isHidden = false
-            playerLifeFour.isHidden = false
-        }
+        print(ViewController.lifePointTemp)
         if ViewController.lifePointTemp == 1{
-            playerLifeOne.setTitle("8000", for: .normal)
+        playerLifeOne.setTitle("8000", for: .normal)
             playerLifeTwo.setTitle("8000", for: .normal)
             playerLifeThree.setTitle("8000", for: .normal)
             playerLifeFour.setTitle("8000", for: .normal)
         }
-        else if ViewController.lifePointTemp == 2{
-            playerLifeOne.setTitle("20", for: .normal)
+        else if ViewController.lifePointTemp == 2{ 
+            playerLifeOne.setTitle("20",for: .normal)
             playerLifeTwo.setTitle("20", for: .normal)
             playerLifeThree.setTitle("20", for: .normal)
             playerLifeFour.setTitle("20", for: .normal)
         }
-       else if ViewController.lifePointTemp == 3{
+        else if ViewController.lifePointTemp == 3{
             playerLifeOne.setTitle("0", for: .normal)
             playerLifeTwo.setTitle("0", for: .normal)
             playerLifeThree.setTitle("0", for: .normal)
             playerLifeFour.setTitle("0", for: .normal)
         }
+        if ViewController.playersNum == 3{
+            playerNameThree.isHidden = false
+            playerLifeThree.isHidden = false
+        }
+         else if ViewController.playersNum == 4{
+            playerNameThree.isHidden = false
+            playerLifeThree.isHidden = false
+            playerNameFour.isHidden = false
+            playerLifeFour.isHidden = false
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +65,53 @@ class mainViewController: UIViewController {
     
     @IBOutlet weak var diceButton: UIButton!
     @IBOutlet weak var coinButton: UIButton!
+    
+    @IBOutlet weak var displayCalcValue: UILabel!
+    @IBOutlet weak var buttonOne: UIButton!
+    @IBOutlet weak var buttonTwo: UIButton!
+    @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet weak var buttonFour: UIButton!
+    @IBOutlet weak var buttonFive: UIButton!
+    @IBOutlet weak var buttonSix: UIButton!
+    @IBOutlet weak var buttonSeven: UIButton!
+    @IBOutlet weak var buttonEight: UIButton!
+    @IBOutlet weak var buttonNine: UIButton!
+    @IBOutlet weak var buttonZero: UIButton!
+    @IBOutlet weak var buttonMinus: UIButton!
+    @IBOutlet weak var buttonPlus: UIButton!
+    
+    
+    func loadCalc(){
+        displayCalcValue.isHidden = false
+        buttonOne.isHidden = false
+        buttonTwo.isHidden = false
+        buttonThree.isHidden = false
+        buttonFour.isHidden = false
+        buttonFive.isHidden = false
+        buttonSix.isHidden = false
+        buttonSeven.isHidden = false
+        buttonEight.isHidden = false
+        buttonNine.isHidden = false
+        buttonZero.isHidden = false
+        buttonMinus.isHidden = false
+        buttonPlus.isHidden = false
+    }
+    
+    @IBAction func playerCalcOne(_ sender: Any) {
+        loadCalc()
+    }
+    
+    @IBAction func playerCalcTwo(_ sender: Any) {
+        loadCalc()
+    }
+    
+    @IBAction func playerCalcThree(_ sender: Any) {
+        loadCalc()
+    }
+    
+    @IBAction func playerCalcFour(_ sender: Any) {
+        loadCalc()
+    }
     
     @IBAction func diceButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 0

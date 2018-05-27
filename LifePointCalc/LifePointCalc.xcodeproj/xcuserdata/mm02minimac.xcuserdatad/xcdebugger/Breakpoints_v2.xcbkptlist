@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LifePointCalc/mainViewController.swift"
-            timestampString = "549091079.418664"
+            timestampString = "549099408.950526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
