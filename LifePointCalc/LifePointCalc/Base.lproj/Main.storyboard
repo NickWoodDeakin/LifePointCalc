@@ -20,6 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="peA-3S-b4U"/>
                     </view>
+                    <connections>
+                        <segue destination="Ipg-9e-LrQ" kind="show" identifier="toMainFromHistory" id="fcW-Mc-B24"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTc-ne-Ld7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,11 +344,12 @@
                         <outlet property="playerTwoName" destination="rbE-Lp-iBP" id="Op5-Fw-Cl2"/>
                         <segue destination="1t2-95-WYu" kind="show" identifier="toRandomFromMain" id="T8L-yd-4YU"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toStartFromMain" id="nJp-SE-oGj"/>
+                        <segue destination="M1B-OP-hZ1" kind="show" identifier="toHistoryFromMain" id="aZI-91-nos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NV-9D-Shk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-657.12143928035982" y="117.59999999999999"/>
+            <point key="canvasLocation" x="-657" y="150"/>
         </scene>
         <!--Random View Controller-->
         <scene sceneID="BDd-84-nbl">
@@ -574,7 +578,6 @@
         <image name="coinHeads" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T8L-yd-4YU"/>
-        <segue reference="imf-i3-XJx"/>
+        <segue reference="fcW-Mc-B24"/>
     </inferredMetricsTieBreakers>
 </document>
