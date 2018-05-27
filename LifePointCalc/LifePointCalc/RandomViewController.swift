@@ -31,8 +31,7 @@ class RandomViewController: UIViewController {
             noOfDiceCoinsLabel.text = "Number of Coins"
             Sides = 2
         }
-        TestLabel2.isHidden = true
-        TestLabel3.isHidden = true
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,13 +41,9 @@ class RandomViewController: UIViewController {
     
     var Sides = 6 // Sides of dice
     var dcNum = 1 // Number of Coins/Dice
-    var results = [Int]() // Array of roll/flip results filled by the Random function
+    var results = [Int]()
     
     @IBOutlet weak var TestLabel: UILabel!
-    
-    @IBOutlet weak var TestLabel2: UILabel!
-    
-    @IBOutlet weak var TestLabel3: UILabel!
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -64,31 +59,12 @@ class RandomViewController: UIViewController {
     
     @IBOutlet weak var noOfDiceCoinsMinus: UIButton!
     
-  
     @IBOutlet weak var TestButton: UIButton!
     
     
     @IBAction func TestButtonPress(_ sender: Any) {
         results = Random(dcNum, Sides)
-        
-        
-        
-        if dcNum == 1
-        {
-            TestLabel.text = String(results[0] + 1)
-        }
-        else if dcNum == 2
-        {
-            TestLabel.text = String(results[0] + 1)
-            TestLabel2.text = String(results[1] + 1)
-            
-        }
-        else
-        {
-            TestLabel.text = String(results[0] + 1)
-            TestLabel2.text = String(results[1] + 1)
-            TestLabel3.text = String(results[2] + 1)
-        }
+        TestLabel.text = String(results[0] + 1)
         
     }
     
@@ -112,51 +88,8 @@ class RandomViewController: UIViewController {
         }
     }
     
-    @IBAction func noOfDCPlus(_ sender: Any) {
-        if dcNum < 3
-        {
-            dcNum = dcNum + 1
-        }
-        if dcNum == 1
-        {
-            TestLabel2.isHidden = true
-            TestLabel3.isHidden = true
-        }
-        else if dcNum == 2
-        {
-            TestLabel2.isHidden = false
-            TestLabel3.isHidden = true
-        }
-        else
-        {
-            TestLabel2.isHidden = false
-            TestLabel3.isHidden = false
-        }
-    }
     
-    @IBAction func noOfDCMinus(_ sender: Any) {
-        if dcNum > 1
-        {
-            dcNum = dcNum - 1
-        }
-        if dcNum == 1
-        {
-            TestLabel2.isHidden = true
-            TestLabel3.isHidden = true
-        }
-        else if dcNum == 2
-        {
-            TestLabel2.isHidden = false
-            TestLabel3.isHidden = true
-        }
-        else
-        {
-            TestLabel2.isHidden = false
-            TestLabel3.isHidden = false
-        }
-    }
     
-   
     
     func Random(_ a: Int, _ b: Int) -> [Int] {
         let num = a
