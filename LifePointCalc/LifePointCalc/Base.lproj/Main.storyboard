@@ -134,12 +134,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="noOfDCPlus:" destination="1t2-95-WYu" eventType="touchUpInside" id="d5O-Nu-29Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-Rb-qV4">
                                 <rect key="frame" x="213" y="331" width="30" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="noOfDCMinus:" destination="1t2-95-WYu" eventType="touchUpInside" id="9aT-VL-g9W"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of dice/coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0su-4c-1jo">
                                 <rect key="frame" x="251" y="336" width="165" height="21"/>
@@ -174,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-HD-udv">
-                                <rect key="frame" x="488" y="172" width="51" height="30"/>
+                                <rect key="frame" x="579" y="20" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Roll/flip"/>
                                 <connections>
@@ -188,6 +194,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI1-dE-Mo0">
+                                <rect key="frame" x="483" y="177" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W03-Nk-r45">
+                                <rect key="frame" x="138" y="177" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="X7V-zV-blP"/>
@@ -196,6 +216,8 @@
                         <outlet property="NoOfSidesOnDiceLabel" destination="526-nd-S4T" id="61v-zy-DhW"/>
                         <outlet property="TestButton" destination="ecg-HD-udv" id="2Kj-Ez-msI"/>
                         <outlet property="TestLabel" destination="HVq-2o-Qrl" id="g2X-zv-M82"/>
+                        <outlet property="TestLabel2" destination="W03-Nk-r45" id="p8d-yy-Pfy"/>
+                        <outlet property="TestLabel3" destination="QI1-dE-Mo0" id="wPK-PZ-AIQ"/>
                         <outlet property="backButton" destination="iKa-XK-jpo" id="t8A-Et-qcU"/>
                         <outlet property="noOfDiceCoinsLabel" destination="0su-4c-1jo" id="Egm-JR-kFs"/>
                         <outlet property="noOfDiceCoinsMinus" destination="aWc-Rb-qV4" id="0yy-rn-gix"/>
@@ -224,7 +246,6 @@
                                 <state key="normal" title="8000"/>
                                 <connections>
                                     <action selector="LifePointStartOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ob-Tj-lDX"/>
-                                    <action selector="SetLifePoints8000:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-3E-HHX"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-l4-TSX">
