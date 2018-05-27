@@ -41,11 +41,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN8-HP-gjO">
-
                                 <rect key="frame" x="0.0" y="66" width="205" height="56"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="8000">
                                     <color key="titleColor" red="1" green="0.017688729485289212" blue="0.72163700128844499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -86,20 +84,8 @@
                                     <action selector="playerCalcFour:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="h6P-Li-hSn"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-fj-bjT">
-                                <rect key="frame" x="506" y="232" width="136" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <state key="normal" title="Player 4">
-                                    <color key="titleColor" red="0.0" green="0.27615591340000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-            
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7K-ka-j6A">
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7K-ka-j6A">
                                 <rect key="frame" x="205" y="69" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -110,10 +96,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="h5n-97-u9e"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkY-hm-qzw">
+                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkY-hm-qzw">
                                 <rect key="frame" x="271" y="69" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -124,10 +108,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="rQF-OJ-dlu"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ig-6B-rIL">
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ig-6B-rIL">
                                 <rect key="frame" x="337" y="69" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -138,10 +120,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="RDR-8j-xek"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-UZ-0zQ">
+                            <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbr-UZ-0zQ">
                                 <rect key="frame" x="403" y="69" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -152,10 +132,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="hBi-eB-5IX"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbz-mt-aO6">
+                            <button hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbz-mt-aO6">
                                 <rect key="frame" x="205" y="129" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -166,10 +144,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="c9u-XH-huE"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lol-BC-6pF">
+                            <button hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lol-BC-6pF">
                                 <rect key="frame" x="271" y="129" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -180,10 +156,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="8PP-av-Wy6"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB7-Uu-b5u">
+                            <button hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB7-Uu-b5u">
                                 <rect key="frame" x="337" y="129" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -194,10 +168,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="74i-di-VVy"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-ae-o9C">
+                            <button hidden="YES" opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fba-ae-o9C">
                                 <rect key="frame" x="403" y="129" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -208,10 +180,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="UUZ-gx-Qnd"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-RJ-H3t">
+                            <button hidden="YES" opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-RJ-H3t">
                                 <rect key="frame" x="205" y="191" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -234,10 +204,8 @@
                                     <action selector="numbers:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="76I-bC-EgN"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-S8-0f0">
+                            <button hidden="YES" opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-S8-0f0">
                                 <rect key="frame" x="337" y="191" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -248,10 +216,8 @@
                                     <action selector="calcControl:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="de4-J2-9Nv"/>
                                 </connections>
                             </button>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RN-BT-jMA">
+                            <button hidden="YES" opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RN-BT-jMA">
                                 <rect key="frame" x="403" y="191" width="58" height="54"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.54046055420000005" green="0.68589298809999999" blue="0.80144333840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -262,19 +228,8 @@
                                     <action selector="calcControl:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="b5C-Ln-mPz"/>
                                 </connections>
                             </button>
-
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w33-BF-1rF">
-                                <rect key="frame" x="205" y="10" width="256" height="41"/>
-
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLm-Nh-iOa">
+                            <button hidden="YES" opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLm-Nh-iOa">
                                 <rect key="frame" x="205" y="256" width="256" height="52"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.11075463683790698" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
@@ -285,10 +240,8 @@
                                     <action selector="calcControl:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="23J-7c-YnZ"/>
                                 </connections>
                             </button>
-
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-4N-HbP">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-4N-HbP">
                                 <rect key="frame" x="266" y="316" width="134" height="52"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Back"/>
@@ -324,15 +277,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w33-BF-1rF">
+                                <rect key="frame" x="205" y="10" width="256" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qGM-c8-XZd"/>
                     </view>
                     <connections>
-
                         <outlet property="buttonBack" destination="OdV-4N-HbP" id="dJc-Cb-Go1"/>
                         <outlet property="buttonClear" destination="KLm-Nh-iOa" id="ouv-vJ-mUM"/>
-
                         <outlet property="buttonEight" destination="Fba-ae-o9C" id="NyU-5E-PS2"/>
                         <outlet property="buttonFive" destination="Vbz-mt-aO6" id="970-8S-WkN"/>
                         <outlet property="buttonFour" destination="Tbr-UZ-0zQ" id="FKf-tY-rRK"/>
@@ -591,7 +549,6 @@
         <image name="coinHeads" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="T8L-yd-4YU"/>
         <segue reference="imf-i3-XJx"/>
     </inferredMetricsTieBreakers>
 </document>
