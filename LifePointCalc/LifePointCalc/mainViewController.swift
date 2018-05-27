@@ -65,6 +65,7 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    var disableBack = 0
     var player = 0
     var lifePointTemp:Double = 0
     var startingLifePoints = 1
@@ -76,26 +77,14 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     var buttonValue = 0
     var lifePointString = ""
 
-
-    
     @IBOutlet weak var playerOneName: UITextField!
-    
     @IBOutlet weak var playerTwoName: UITextField!
-    
     @IBOutlet weak var playerThreeName: UITextField!
-    
     @IBOutlet weak var playerFourName: UITextField!
 
-    
     @IBOutlet weak var playerLifeOne: UIButton!
-    
-    
     @IBOutlet weak var playerLifeTwo: UIButton!
-    
-    
     @IBOutlet weak var playerLifeThree: UIButton!
-    
-    
     @IBOutlet weak var playerLifeFour: UIButton!
     
     @IBOutlet weak var diceButton: UIButton!
@@ -132,7 +121,6 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         buttonMinus.isHidden = false
         buttonPlus.isHidden = false
         buttonClear.isHidden = false
-        buttonBack.isHidden = false
     }
     
     func hideCalc(){
@@ -150,7 +138,6 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         buttonMinus.isHidden = true
         buttonPlus.isHidden = true
         buttonClear.isHidden = true
-        buttonBack.isHidden = true
     }
     
     @IBAction func numbers(_ sender: UIButton) {
@@ -238,7 +225,6 @@ class mainViewController: UIViewController, UITextFieldDelegate {
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
                 }
-                
             }
         }
         else if sender.tag == 12{
@@ -249,30 +235,40 @@ class mainViewController: UIViewController, UITextFieldDelegate {
             hideCalc()
             lifePointString = ""
             displayCalcValue.text = lifePointString
-            
+            disableBack = 0
         }
     }
-    
     
     @IBAction func playerCalcOne(_ sender: Any) {
         loadCalc()
         player = 1
+        disableBack = 1
     }
     
     @IBAction func playerCalcTwo(_ sender: Any) {
         loadCalc()
         player = 2
+        disableBack = 1
     }
     
     @IBAction func playerCalcThree(_ sender: Any) {
         loadCalc()
         player = 3
+        disableBack = 1
     }
     
     @IBAction func playerCalcFour(_ sender: Any) {
         loadCalc()
         player = 4
+        disableBack = 1
     }
+    
+    @IBAction func backButton(_ sender: Any) {
+        if disableBack == 0{
+        performSegue(withIdentifier: "toStartFromMain", sender: nil)
+        }
+    }
+    
     
     @IBAction func diceButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 0

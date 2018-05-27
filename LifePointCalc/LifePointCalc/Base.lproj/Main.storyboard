@@ -246,6 +246,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
+                                    <action selector="backButton:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="PU9-sO-248"/>
                                     <action selector="calcControl:" destination="Ipg-9e-LrQ" eventType="touchUpInside" id="ZIo-w0-3gj"/>
                                 </connections>
                             </button>
@@ -549,6 +550,6 @@
         <image name="coinHeads" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="imf-i3-XJx"/>
+        <segue reference="kMU-bJ-7cw"/>
     </inferredMetricsTieBreakers>
 </document>
