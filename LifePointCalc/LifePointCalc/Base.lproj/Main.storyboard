@@ -66,7 +66,7 @@
                                     <color key="titleColor" red="0.0" green="0.27615591340000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="762-CB-ZkZ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="762-CB-ZkZ">
                                 <rect key="frame" x="48" y="282" width="147" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
@@ -74,7 +74,7 @@
                                     <color key="titleColor" red="1" green="0.017688729489999999" blue="0.72163700129999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a80-sS-PME">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a80-sS-PME">
                                 <rect key="frame" x="54" y="243" width="135" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
@@ -82,7 +82,7 @@
                                     <color key="titleColor" red="0.0" green="0.27615591340000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ron-Gl-lve">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ron-Gl-lve">
                                 <rect key="frame" x="500" y="271" width="147" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
@@ -90,7 +90,7 @@
                                     <color key="titleColor" red="1" green="0.017688729489999999" blue="0.72163700129999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-fj-bjT">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-fj-bjT">
                                 <rect key="frame" x="506" y="232" width="136" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
@@ -105,6 +105,14 @@
                     <connections>
                         <outlet property="coinButton" destination="hO1-jZ-BUz" id="Ihs-Yp-zUG"/>
                         <outlet property="diceButton" destination="jrb-fW-iFO" id="NDw-kr-u9w"/>
+                        <outlet property="playerLifeFour" destination="Ron-Gl-lve" id="r7z-nd-K8i"/>
+                        <outlet property="playerLifeOne" destination="uN8-HP-gjO" id="0Uh-Ir-9sO"/>
+                        <outlet property="playerLifeThree" destination="762-CB-ZkZ" id="DqM-kK-56y"/>
+                        <outlet property="playerLifeTwo" destination="yyt-go-Fqn" id="qo1-iB-g8L"/>
+                        <outlet property="playerNameFour" destination="jSd-fj-bjT" id="tXt-ev-BPi"/>
+                        <outlet property="playerNameOne" destination="Jer-qw-ncU" id="0vz-bd-y2b"/>
+                        <outlet property="playerNameThree" destination="a80-sS-PME" id="hnM-u1-g2s"/>
+                        <outlet property="playerNameTwo" destination="Q2G-YB-Ndl" id="oOW-DU-99i"/>
                         <segue destination="1t2-95-WYu" kind="show" identifier="toRandomFromMain" id="T8L-yd-4YU"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toStartFromMain" id="nJp-SE-oGj"/>
                     </connections>
@@ -165,7 +173,6 @@
                                 <state key="normal" title="8000"/>
                                 <connections>
                                     <action selector="LifePointStartOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ob-Tj-lDX"/>
-                                    <action selector="SetLifePoints8000:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICI-3E-HHX"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-l4-TSX">
