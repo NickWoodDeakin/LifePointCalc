@@ -8,10 +8,15 @@
 
 import UIKit
 
-class mainViewController: UIViewController {
+class mainViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerOneName.delegate = self
+        playerTwoName.delegate = self
+        playerThreeName.delegate = self
+        playerFourName.delegate = self
+        
         print(ViewController.lifePointTemp)
         if ViewController.lifePointTemp == 1{
         playerLifeOne.setTitle("8000", for: .normal)
@@ -44,13 +49,13 @@ class mainViewController: UIViewController {
             playerFourLifePoints = 0
         }
         if ViewController.playersNum == 3{
-            playerNameThree.isHidden = false
+            playerThreeName.isHidden = false
             playerLifeThree.isHidden = false
         }
          else if ViewController.playersNum == 4{
-            playerNameThree.isHidden = false
+            playerThreeName.isHidden = false
             playerLifeThree.isHidden = false
-            playerNameFour.isHidden = false
+            playerFourName.isHidden = false
             playerLifeFour.isHidden = false
         }
         
@@ -63,23 +68,34 @@ class mainViewController: UIViewController {
     var player = 0
     var lifePointTemp:Double = 0
     var startingLifePoints = 1
+
     var playerOneLifePoints:Double = 0
     var playerTwoLifePoints:Double = 0
     var playerThreeLifePoints:Double = 0
     var playerFourLifePoints:Double = 0
     var buttonValue = 0
     var lifePointString = ""
+
+
     
-    @IBOutlet weak var playerNameOne: UIButton!
+    @IBOutlet weak var playerOneName: UITextField!
+    
+    @IBOutlet weak var playerTwoName: UITextField!
+    
+    @IBOutlet weak var playerThreeName: UITextField!
+    
+    @IBOutlet weak var playerFourName: UITextField!
+
+    
     @IBOutlet weak var playerLifeOne: UIButton!
     
-    @IBOutlet weak var playerNameTwo: UIButton!
+    
     @IBOutlet weak var playerLifeTwo: UIButton!
     
-    @IBOutlet weak var playerNameThree: UIButton!
+    
     @IBOutlet weak var playerLifeThree: UIButton!
     
-    @IBOutlet weak var playerNameFour: UIButton!
+    
     @IBOutlet weak var playerLifeFour: UIButton!
     
     @IBOutlet weak var diceButton: UIButton!
@@ -268,6 +284,19 @@ class mainViewController: UIViewController {
         ViewController.diceOrCoin = 1
         performSegue(withIdentifier: "toRandomFromMain", sender: nil)
     }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        playerOneName.resignFirstResponder()
+        playerTwoName.resignFirstResponder()
+        playerThreeName.resignFirstResponder()
+        playerFourName.resignFirstResponder()
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
