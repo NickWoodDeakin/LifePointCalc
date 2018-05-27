@@ -12,6 +12,13 @@ class mainViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mainBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
+        playerLifeOne.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[0]], for: .normal)
+        playerLifeTwo.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[1]], for: .normal)
+        playerLifeThree.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[2]], for: .normal)
+        playerLifeFour.setTitleColor(settingsViewController.colours[settingsViewController.playerColours[3]], for: .normal)
+        
         playerOneName.delegate = self
         playerTwoName.delegate = self
         playerThreeName.delegate = self
@@ -64,6 +71,9 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBOutlet weak var mainBackground: UIImageView!
     var disableBack = 0
     var player = 0
     var lifePointTemp:Double = 0
@@ -88,6 +98,8 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var diceButton: UIButton!
     @IBOutlet weak var coinButton: UIButton!
+    
+    @IBOutlet weak var settingsButton: UIButton!
     
     @IBOutlet weak var displayCalcValue: UILabel!
     @IBOutlet weak var buttonOne: UIButton!
@@ -285,6 +297,11 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     @IBAction func coinButtonPress(_ sender: Any) {
         ViewController.diceOrCoin = 1
         performSegue(withIdentifier: "toRandomFromMain", sender: nil)
+    }
+    
+    
+    @IBAction func settingsButtonPress(_ sender: Any) {
+        performSegue(withIdentifier: "toSettingsFromMain", sender: nil)
     }
     
     

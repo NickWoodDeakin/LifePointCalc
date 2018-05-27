@@ -12,9 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        startBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
     }
-   
+    
+    
+    @IBOutlet weak var startBackground: UIImageView!
+    
     @IBOutlet weak var setlifepoint1: UIButton!
     @IBOutlet weak var setLifePoint2: UIButton!
     @IBOutlet weak var setLifePoint3: UIButton!

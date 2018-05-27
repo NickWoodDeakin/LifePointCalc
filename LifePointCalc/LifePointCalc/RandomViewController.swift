@@ -13,6 +13,8 @@ class RandomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        randomBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
+        
         if ViewController.diceOrCoin == 0{
             DCImage1.image = dice[0]
             DCImage2.image = dice[0]
@@ -60,7 +62,10 @@ class RandomViewController: UIViewController {
         UIImage(named: "coinHeads.png")!,
         UIImage(named: "coinTails.png")!,
     ]
-
+    
+    
+    @IBOutlet weak var randomBackground: UIImageView!
+    
     @IBOutlet weak var DCImage1: UIImageView!
     @IBOutlet weak var DCImage2: UIImageView!
     @IBOutlet weak var DCImage3: UIImageView!

@@ -12,6 +12,7 @@ class historyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        historyBackground.image = settingsViewController.backgrounds[settingsViewController.Background]
 
         // Do any additional setup after loading the view.
     }
@@ -26,7 +27,8 @@ class historyViewController: UIViewController {
     }
     
     
-
+    @IBOutlet weak var historyBackground: UIImageView!
+    
     /*
     // MARK: - Navigation
 
