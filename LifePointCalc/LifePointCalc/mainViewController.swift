@@ -18,18 +18,30 @@ class mainViewController: UIViewController {
             playerLifeTwo.setTitle("8000", for: .normal)
             playerLifeThree.setTitle("8000", for: .normal)
             playerLifeFour.setTitle("8000", for: .normal)
+            playerOneLifePoints = 8000
+            playerTwoLifePoints = 8000
+            playerThreeLifePoints = 8000
+            playerFourLifePoints = 8000
         }
         else if ViewController.lifePointTemp == 2{ 
             playerLifeOne.setTitle("20",for: .normal)
             playerLifeTwo.setTitle("20", for: .normal)
             playerLifeThree.setTitle("20", for: .normal)
             playerLifeFour.setTitle("20", for: .normal)
+            playerOneLifePoints = 20
+            playerTwoLifePoints = 20
+            playerThreeLifePoints = 20
+            playerFourLifePoints = 20
         }
         else if ViewController.lifePointTemp == 3{
             playerLifeOne.setTitle("0", for: .normal)
             playerLifeTwo.setTitle("0", for: .normal)
             playerLifeThree.setTitle("0", for: .normal)
             playerLifeFour.setTitle("0", for: .normal)
+            playerOneLifePoints = 0
+            playerTwoLifePoints = 0
+            playerThreeLifePoints = 0
+            playerFourLifePoints = 0
         }
         if ViewController.playersNum == 3{
             playerNameThree.isHidden = false
@@ -48,8 +60,15 @@ class mainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    var players = 1
+    var player = 0
+    var lifePointTemp:Double = 0
     var startingLifePoints = 1
+    var playerOneLifePoints:Double = 0
+    var playerTwoLifePoints:Double = 0
+    var playerThreeLifePoints:Double = 0
+    var playerFourLifePoints:Double = 0
+    var buttonValue = 0
+    var lifePointString = ""
     
     @IBOutlet weak var playerNameOne: UIButton!
     @IBOutlet weak var playerLifeOne: UIButton!
@@ -79,8 +98,8 @@ class mainViewController: UIViewController {
     @IBOutlet weak var buttonZero: UIButton!
     @IBOutlet weak var buttonMinus: UIButton!
     @IBOutlet weak var buttonPlus: UIButton!
+    @IBOutlet weak var buttonBack: UIButton!
     @IBOutlet weak var buttonClear: UIButton!
-    
     
     func loadCalc(){
         displayCalcValue.isHidden = false
@@ -97,22 +116,146 @@ class mainViewController: UIViewController {
         buttonMinus.isHidden = false
         buttonPlus.isHidden = false
         buttonClear.isHidden = false
+        buttonBack.isHidden = false
     }
+    
+    func hideCalc(){
+        displayCalcValue.isHidden = true
+        buttonOne.isHidden = true
+        buttonTwo.isHidden = true
+        buttonThree.isHidden = true
+        buttonFour.isHidden = true
+        buttonFive.isHidden = true
+        buttonSix.isHidden = true
+        buttonSeven.isHidden = true
+        buttonEight.isHidden = true
+        buttonNine.isHidden = true
+        buttonZero.isHidden = true
+        buttonMinus.isHidden = true
+        buttonPlus.isHidden = true
+        buttonClear.isHidden = true
+        buttonBack.isHidden = true
+    }
+    
+    @IBAction func numbers(_ sender: UIButton) {
+        displayCalcValue.text = displayCalcValue.text! + String(sender.tag)
+        lifePointTemp = Double(displayCalcValue.text!)!
+    }
+    
+    @IBAction func calcControl(_ sender: UIButton) {
+        if displayCalcValue.text != "" && sender.tag != 12{
+            if sender.tag == 11//add
+            {
+                if player == 1{
+                    playerOneLifePoints = lifePointTemp + playerOneLifePoints
+                    lifePointString = String(format: "%.0f", playerOneLifePoints)
+                    lifePointTemp = 0
+                    playerLifeOne.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                else if player == 2{
+                    playerTwoLifePoints = lifePointTemp + playerTwoLifePoints
+                    lifePointString = String(format: "%.0f", playerTwoLifePoints)
+                    lifePointTemp = 0
+                    playerLifeTwo.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                else if player == 3{
+                    playerThreeLifePoints = lifePointTemp + playerThreeLifePoints
+                    lifePointString = String(format: "%.0f", playerThreeLifePoints)
+                    lifePointTemp = 0
+                    playerLifeThree.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                else if player == 4{
+                    playerFourLifePoints = lifePointTemp + playerFourLifePoints
+                    lifePointString = String(format: "%.0f", playerFourLifePoints)
+                    lifePointTemp = 0
+                    playerLifeFour.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+            }
+            else if sender.tag == 10//subtract
+            {
+                if player == 1{
+                    playerOneLifePoints = playerOneLifePoints - lifePointTemp
+                    lifePointString = String(format: "%.0f", playerOneLifePoints)
+                    lifePointTemp = 0
+                    playerLifeOne.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                else if player == 2{
+                    playerTwoLifePoints = playerTwoLifePoints - lifePointTemp
+                    lifePointString = String(format: "%.0f", playerTwoLifePoints)
+                    lifePointTemp = 0
+                    playerLifeTwo.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                else if player == 3{
+                    playerThreeLifePoints =
+                    playerThreeLifePoints - lifePointTemp
+                    lifePointString = String(format: "%.0f", playerThreeLifePoints)
+                    lifePointTemp = 0
+                    playerLifeThree.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                else if player == 4{
+                    playerFourLifePoints = playerFourLifePoints - lifePointTemp
+                    lifePointString = String(format: "%.0f", playerFourLifePoints)
+                    lifePointTemp = 0
+                    playerLifeFour.setTitle(lifePointString,for: .normal)
+                    hideCalc()
+                    lifePointString = ""
+                    displayCalcValue.text = lifePointString
+                }
+                
+            }
+        }
+        else if sender.tag == 12{
+            lifePointString = ""
+            displayCalcValue.text = lifePointString
+        }
+        else if sender.tag == 13{
+            hideCalc()
+            lifePointString = ""
+            displayCalcValue.text = lifePointString
+            
+        }
+    }
+    
     
     @IBAction func playerCalcOne(_ sender: Any) {
         loadCalc()
+        player = 1
     }
     
     @IBAction func playerCalcTwo(_ sender: Any) {
         loadCalc()
+        player = 2
     }
     
     @IBAction func playerCalcThree(_ sender: Any) {
         loadCalc()
+        player = 3
     }
     
     @IBAction func playerCalcFour(_ sender: Any) {
         loadCalc()
+        player = 4
     }
     
     @IBAction func diceButtonPress(_ sender: Any) {
