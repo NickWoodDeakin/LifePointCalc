@@ -282,12 +282,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="noOfDCPlus:" destination="1t2-95-WYu" eventType="touchUpInside" id="LCN-Ky-iwJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-Rb-qV4">
                                 <rect key="frame" x="213" y="331" width="30" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="noOfDCMinus:" destination="1t2-95-WYu" eventType="touchUpInside" id="K3F-n0-nHM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of dice/coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0su-4c-1jo">
                                 <rect key="frame" x="251" y="336" width="165" height="21"/>
@@ -321,16 +327,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-HD-udv">
-                                <rect key="frame" x="488" y="172" width="51" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oqa-MC-BHl">
+                                <rect key="frame" x="278" y="123" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Roll/flip"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQz-Yx-wrA">
+                                <rect key="frame" x="104" y="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNM-EX-cHj">
+                                <rect key="frame" x="449" y="123" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-js-00N">
+                                <rect key="frame" x="62" y="91" width="560" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="TestButtonPress:" destination="1t2-95-WYu" eventType="touchUpInside" id="gXK-p8-Cpv"/>
+                                    <action selector="RollFlip:" destination="1t2-95-WYu" eventType="touchUpInside" id="ytX-fe-cQ2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVq-2o-Qrl">
-                                <rect key="frame" x="312" y="177" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to see results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpo-XZ-sLJ">
+                                <rect key="frame" x="275" y="24" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -341,13 +368,15 @@
                         <viewLayoutGuide key="safeArea" id="X7V-zV-blP"/>
                     </view>
                     <connections>
-                        <outlet property="NoOfSidesOnDiceLabel" destination="526-nd-S4T" id="61v-zy-DhW"/>
-                        <outlet property="TestButton" destination="ecg-HD-udv" id="2Kj-Ez-msI"/>
-                        <outlet property="TestLabel" destination="HVq-2o-Qrl" id="g2X-zv-M82"/>
+                        <outlet property="DCImage1" destination="Oqa-MC-BHl" id="tPU-R8-O3g"/>
+                        <outlet property="DCImage2" destination="eQz-Yx-wrA" id="oUu-CS-6Fb"/>
+                        <outlet property="DCImage3" destination="sNM-EX-cHj" id="ynH-JS-RYF"/>
                         <outlet property="backButton" destination="iKa-XK-jpo" id="t8A-Et-qcU"/>
                         <outlet property="noOfDiceCoinsLabel" destination="0su-4c-1jo" id="Egm-JR-kFs"/>
                         <outlet property="noOfDiceCoinsMinus" destination="aWc-Rb-qV4" id="0yy-rn-gix"/>
                         <outlet property="noOfDiceCoinsPlus" destination="hpO-qJ-jDd" id="sFb-5D-Zuk"/>
+                        <outlet property="noOfSidesOnDiceLabel" destination="526-nd-S4T" id="SS6-0n-si7"/>
+                        <outlet property="rollFlipButton" destination="Frc-js-00N" id="0u6-iA-WTB"/>
                         <outlet property="sidesOnDiceMinus" destination="v5V-fV-4xd" id="xrz-u6-EG4"/>
                         <outlet property="sidesOnDicePlus" destination="Kt3-wc-iYa" id="bfy-Nx-Eri"/>
                         <segue destination="Ipg-9e-LrQ" kind="show" identifier="toMainFromRandom" id="imf-i3-XJx"/>
@@ -451,11 +480,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="36"/>
+            <point key="canvasLocation" x="110" y="92"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T8L-yd-4YU"/>
         <segue reference="imf-i3-XJx"/>
     </inferredMetricsTieBreakers>
 </document>

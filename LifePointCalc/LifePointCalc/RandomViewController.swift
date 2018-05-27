@@ -15,14 +15,18 @@ class RandomViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         if ViewController.diceOrCoin == 0{
-            TestLabel.text = "DICE"
+            DCImage1.image = dice[0]
+            DCImage2.image = dice[0]
+            DCImage3.image = dice[0]
             noOfSidesOnDiceLabel.text = "Sides on dice = 6"
             Sides = 6
             noOfDiceCoinsLabel.text = "Number of Dice"
         }
         else
         {
-            TestLabel.text = "COIN"
+            DCImage1.image = coin[0]
+            DCImage2.image = coin[0]
+            DCImage3.image = coin[0]
             noOfSidesOnDiceLabel.isHidden = true
             sidesOnDicePlus.isHidden = true
             sidesOnDiceMinus.isHidden = true
@@ -31,7 +35,10 @@ class RandomViewController: UIViewController {
             noOfDiceCoinsLabel.text = "Number of Coins"
             Sides = 2
         }
-        
+
+            DCImage2.isHidden = true
+            DCImage3.isHidden = true
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,10 +48,32 @@ class RandomViewController: UIViewController {
     
     var Sides = 6 // Sides of dice
     var dcNum = 1 // Number of Coins/Dice
-    var results = [Int]()
+
+    var results = [Int]() // Array of roll/flip results filled by the Random function
+    let dice: [UIImage] = [
+        UIImage(named: "1.png")!,
+        UIImage(named: "2.png")!,
+        UIImage(named: "3.png")!,
+        UIImage(named: "4.png")!,
+        UIImage(named: "5.png")!,
+        UIImage(named: "6.png")!,
+    ]
+
+    let coin: [UIImage] = [
+        UIImage(named: "coinHeads.png")!,
+        UIImage(named: "coinTails.png")!,
+    ]
     
-    @IBOutlet weak var TestLabel: UILabel!
+
+    @IBOutlet weak var DCImage1: UIImageView!
     
+    @IBOutlet weak var DCImage2: UIImageView!
+    
+    @IBOutlet weak var DCImage3: UIImageView!
+    
+    @IBOutlet weak var rollFlipButton: UIButton!
+    
+
     @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var noOfSidesOnDiceLabel: UILabel!
@@ -59,14 +88,48 @@ class RandomViewController: UIViewController {
     
     @IBOutlet weak var noOfDiceCoinsMinus: UIButton!
     
-    @IBOutlet weak var TestButton: UIButton!
-    
-    
-    @IBAction func TestButtonPress(_ sender: Any) {
+    @IBAction func RollFlip(_ sender: Any) {
         results = Random(dcNum, Sides)
-        TestLabel.text = String(results[0] + 1)
         
+        if ViewController.diceOrCoin == 0
+        {
+            if dcNum == 1
+            {
+                DCImage1.image = dice[results[0]]
+            }
+            else if dcNum == 2
+            {
+                DCImage1.image = dice[results[0]]
+                DCImage2.image = dice[results[1]]
+            }
+            else if dcNum == 3
+            {
+                DCImage1.image = dice[results[0]]
+                DCImage2.image = dice[results[1]]
+                DCImage3.image = dice[results[2]]
+            }
+        }
+        else
+        {
+            if dcNum == 1
+            {
+                DCImage1.image = coin[results[0]]
+            }
+            else if dcNum == 2
+            {
+                DCImage1.image = coin[results[0]]
+                DCImage2.image = coin[results[1]]
+            }
+            else if dcNum == 3
+            {
+                DCImage1.image = coin[results[0]]
+                DCImage2.image = coin[results[1]]
+                DCImage3.image = coin[results[2]]
+            }
+        }
     }
+    
+    
     
     @IBAction func backButtonPress(_ sender: Any) {
         performSegue(withIdentifier: "toMainFromRandom", sender: nil)
@@ -87,8 +150,52 @@ class RandomViewController: UIViewController {
         noOfSidesOnDiceLabel.text = "Sides on dice = " + String(Sides)
         }
     }
+
+
+    @IBAction func noOfDCPlus(_ sender: Any) {
+        if dcNum < 3
+        {
+            dcNum = dcNum + 1
+        }
+        if dcNum == 1
+        {
+            DCImage2.isHidden = true
+            DCImage3.isHidden = true
+        }
+        else if dcNum == 2
+        {
+            DCImage2.isHidden = false
+            DCImage3.isHidden = true
+        }
+        else
+        {
+            DCImage2.isHidden = false
+            DCImage3.isHidden = false
+        }
+    }
     
-    
+    @IBAction func noOfDCMinus(_ sender: Any) {
+        if dcNum > 1
+        {
+            dcNum = dcNum - 1
+        }
+        if dcNum == 1
+        {
+            DCImage2.isHidden = true
+            DCImage3.isHidden = true
+        }
+        else if dcNum == 2
+        {
+            DCImage2.isHidden = false
+            DCImage3.isHidden = true
+        }
+        else
+        {
+            DCImage2.isHidden = false
+            DCImage3.isHidden = false
+        }
+    }
+
     
     
     func Random(_ a: Int, _ b: Int) -> [Int] {
@@ -112,3 +219,4 @@ class RandomViewController: UIViewController {
      */
     
 }
+
