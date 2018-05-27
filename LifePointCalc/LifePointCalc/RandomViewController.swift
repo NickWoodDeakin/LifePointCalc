@@ -12,7 +12,7 @@ class RandomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //:D
         // Do any additional setup after loading the view.
         if ViewController.diceOrCoin == 0{
             DCImage1.image = dice[0]
