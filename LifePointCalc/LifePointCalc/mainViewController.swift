@@ -17,13 +17,13 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         playerThreeName.delegate = self
         playerFourName.delegate = self
         
-        print(ViewController.lifePointTemp)
-        if ViewController.lifePointTemp == 1{
+        if i == 1{
+            print(i)
         playerLifeOne.setTitle("8000", for: .normal)
             playerLifeTwo.setTitle("8000", for: .normal)
             playerLifeThree.setTitle("8000", for: .normal)
             playerLifeFour.setTitle("8000", for: .normal)
-            playerOneLifePoints = 8000
+            mainViewController.playerOneLifePoints = 8000
             playerTwoLifePoints = 8000
             playerThreeLifePoints = 8000
             playerFourLifePoints = 8000
@@ -33,7 +33,7 @@ class mainViewController: UIViewController, UITextFieldDelegate {
             playerLifeTwo.setTitle("20", for: .normal)
             playerLifeThree.setTitle("20", for: .normal)
             playerLifeFour.setTitle("20", for: .normal)
-            playerOneLifePoints = 20
+            mainViewController.playerOneLifePoints = 20
             playerTwoLifePoints = 20
             playerThreeLifePoints = 20
             playerFourLifePoints = 20
@@ -43,7 +43,14 @@ class mainViewController: UIViewController, UITextFieldDelegate {
             playerLifeTwo.setTitle("0", for: .normal)
             playerLifeThree.setTitle("0", for: .normal)
             playerLifeFour.setTitle("0", for: .normal)
-            playerOneLifePoints = 0
+        }
+        if i == 9{
+            print(" t")
+            playerLifeOne.setTitle(historyViewController.tempStoreOne, for: .normal)
+            playerLifeTwo.setTitle(historyViewController.tempStoreTwo, for: .normal)
+            playerLifeThree.setTitle(historyViewController.tempStoreThree, for: .normal)
+            playerLifeFour.setTitle(historyViewController.tempStoreFour, for: .normal)
+            mainViewController.playerOneLifePoints = 0
             playerTwoLifePoints = 0
             playerThreeLifePoints = 0
             playerFourLifePoints = 0
@@ -64,17 +71,28 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    var i = ViewController.lifePointTemp
     var disableBack = 0
     var player = 0
     var lifePointTemp:Double = 0
     var startingLifePoints = 1
 
-    var playerOneLifePoints:Double = 0
+    static var playerOneLifePoints:Double = 0
     var playerTwoLifePoints:Double = 0
     var playerThreeLifePoints:Double = 0
     var playerFourLifePoints:Double = 0
     var buttonValue = 0
+    
     var lifePointString = ""
+    static var lifePointOneString = ""
+    static var lifePointTwoString = ""
+    static var lifePointThreeString = ""
+    static var lifePointFourString = ""
+    static var playerOneHistory = ""
+    static var playerTwoHistory = ""
+    static var playerThreeHistory = ""
+    static var playerFourHistory = ""
+    static var reload = 0
 
     @IBOutlet weak var playerOneName: UITextField!
     @IBOutlet weak var playerTwoName: UITextField!
@@ -105,7 +123,6 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buttonBack: UIButton!
     @IBOutlet weak var buttonClear: UIButton!
     @IBOutlet weak var historyButton: UIButton!
-    
     
     func loadCalc(){
         displayCalcValue.isHidden = false
@@ -153,80 +170,97 @@ class mainViewController: UIViewController, UITextFieldDelegate {
             if sender.tag == 11//add
             {
                 if player == 1{
-                    playerOneLifePoints = lifePointTemp + playerOneLifePoints
-                    lifePointString = String(format: "%.0f", playerOneLifePoints)
+                    mainViewController.playerOneLifePoints = lifePointTemp + mainViewController.playerOneLifePoints
+                    lifePointString = String(format: "%.0f", mainViewController.playerOneLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerOneHistory =  mainViewController.playerOneHistory + lifePointString + "\n"
+                    print(mainViewController.playerOneHistory)
                     playerLifeOne.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointOneString = lifePointString
                 }
                 else if player == 2{
                     playerTwoLifePoints = lifePointTemp + playerTwoLifePoints
                     lifePointString = String(format: "%.0f", playerTwoLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerTwoHistory =  mainViewController.playerTwoHistory + lifePointString + "\n"
                     playerLifeTwo.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointTwoString = lifePointString
                 }
                 else if player == 3{
                     playerThreeLifePoints = lifePointTemp + playerThreeLifePoints
                     lifePointString = String(format: "%.0f", playerThreeLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerThreeHistory =  mainViewController.playerThreeHistory + lifePointString + "\n"
                     playerLifeThree.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointThreeString = lifePointString
                 }
                 else if player == 4{
                     playerFourLifePoints = lifePointTemp + playerFourLifePoints
                     lifePointString = String(format: "%.0f", playerFourLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerFourHistory =  mainViewController.playerFourHistory + lifePointString + "\n"
                     playerLifeFour.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointFourString = lifePointString
                 }
             }
             else if sender.tag == 10//subtract
             {
                 if player == 1{
-                    playerOneLifePoints = playerOneLifePoints - lifePointTemp
-                    lifePointString = String(format: "%.0f", playerOneLifePoints)
+                    mainViewController.playerOneLifePoints = mainViewController.playerOneLifePoints - lifePointTemp
+                    lifePointString = String(format: "%.0f", mainViewController.playerOneLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerOneHistory =  mainViewController.playerOneHistory + lifePointString + "\n"
                     playerLifeOne.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointOneString = lifePointString
                 }
                 else if player == 2{
                     playerTwoLifePoints = playerTwoLifePoints - lifePointTemp
                     lifePointString = String(format: "%.0f", playerTwoLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerTwoHistory =  mainViewController.playerTwoHistory + lifePointString + "\n"
                     playerLifeTwo.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointTwoString = lifePointString
                 }
                 else if player == 3{
                     playerThreeLifePoints =
                     playerThreeLifePoints - lifePointTemp
                     lifePointString = String(format: "%.0f", playerThreeLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerThreeHistory =  mainViewController.playerThreeHistory + lifePointString + "\n"
                     playerLifeThree.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointThreeString = lifePointString
                 }
                 else if player == 4{
                     playerFourLifePoints = playerFourLifePoints - lifePointTemp
                     lifePointString = String(format: "%.0f", playerFourLifePoints)
                     lifePointTemp = 0
+                    mainViewController.playerFourHistory =  mainViewController.playerFourHistory + lifePointString + "\n"
                     playerLifeFour.setTitle(lifePointString,for: .normal)
                     hideCalc()
                     lifePointString = ""
                     displayCalcValue.text = lifePointString
+                    mainViewController.lifePointFourString = lifePointString
                 }
             }
         }
@@ -273,6 +307,9 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func historyView(_ sender: UIButton) {
+        ViewController.lifePointTemp = 777
+        i = 9
+        print(i)
         performSegue(withIdentifier: "toHistoryFromMain", sender: nil)
     }
     
@@ -286,7 +323,6 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         ViewController.diceOrCoin = 1
         performSegue(withIdentifier: "toRandomFromMain", sender: nil)
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

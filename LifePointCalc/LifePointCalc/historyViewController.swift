@@ -12,9 +12,18 @@ class historyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       playerOneVIewHistory.text = mainViewController.playerOneHistory
+        playerTwoViewHistory.text = mainViewController.playerTwoHistory
+        playerThreeViewHistory.text = mainViewController.playerThreeHistory
+        playerFourViewHistory.text = mainViewController.playerFourHistory
+        
     }
+    static var dubOne:Double = mainViewController.playerOneLifePoints
+    static var tempStoreOne = mainViewController.lifePointTwoString
+    static var tempStoreTwo = mainViewController.lifePointTwoString
+    static var tempStoreThree = mainViewController.lifePointThreeString
+    static var tempStoreFour = mainViewController.lifePointFourString
+    static var tempStoreRe = mainViewController.reload
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -22,8 +31,13 @@ class historyViewController: UIViewController {
     }
     
     @IBAction func returnToMain(_ sender: UIButton) {
-        performSegue(withIdentifier: "toMainFromRandom", sender: nil)
+        performSegue(withIdentifier: "toMainFromHistory", sender: nil)
     }
+    
+    @IBOutlet weak var playerOneVIewHistory: UILabel!
+    @IBOutlet weak var playerTwoViewHistory: UILabel!
+    @IBOutlet weak var playerThreeViewHistory: UILabel!
+    @IBOutlet weak var playerFourViewHistory: UILabel!
     
     
 
