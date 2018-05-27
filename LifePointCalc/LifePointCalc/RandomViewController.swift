@@ -62,29 +62,19 @@ class RandomViewController: UIViewController {
         UIImage(named: "coinHeads.png")!,
         UIImage(named: "coinTails.png")!,
     ]
-    
 
     @IBOutlet weak var DCImage1: UIImageView!
-    
     @IBOutlet weak var DCImage2: UIImageView!
-    
     @IBOutlet weak var DCImage3: UIImageView!
     
     @IBOutlet weak var rollFlipButton: UIButton!
-    
-
     @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var noOfSidesOnDiceLabel: UILabel!
     
     @IBOutlet weak var sidesOnDicePlus: UIButton!
-    
     @IBOutlet weak var sidesOnDiceMinus: UIButton!
-    
     @IBOutlet weak var noOfDiceCoinsLabel: UILabel!
-    
     @IBOutlet weak var noOfDiceCoinsPlus: UIButton!
-    
     @IBOutlet weak var noOfDiceCoinsMinus: UIButton!
     
     @IBAction func RollFlip(_ sender: Any) {
@@ -128,8 +118,6 @@ class RandomViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func backButtonPress(_ sender: Any) {
         performSegue(withIdentifier: "toMainFromRandom", sender: nil)
     }
@@ -149,7 +137,6 @@ class RandomViewController: UIViewController {
         noOfSidesOnDiceLabel.text = "Sides on dice = " + String(Sides)
         }
     }
-
 
     @IBAction func noOfDCPlus(_ sender: Any) {
         if dcNum < 3
@@ -194,8 +181,6 @@ class RandomViewController: UIViewController {
             DCImage3.isHidden = false
         }
     }
-
-    
     
     func Random(_ a: Int, _ b: Int) -> [Int] {
         let num = a
@@ -218,4 +203,3 @@ class RandomViewController: UIViewController {
      */
     
 }
-

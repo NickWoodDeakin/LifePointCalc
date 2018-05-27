@@ -15,6 +15,7 @@
 		3C05810D20A1ABF600184FBA /* LifePointCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05810C20A1ABF600184FBA /* LifePointCalcTests.swift */; };
 		3C05811820A1ABF600184FBA /* LifePointCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05811720A1ABF600184FBA /* LifePointCalcUITests.swift */; };
 		3C05812620A1C5F600184FBA /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C05812520A1C5F600184FBA /* mainViewController.swift */; };
+		3C9F261C20BB0ED4001AFD87 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F261B20BB0ED4001AFD87 /* historyViewController.swift */; };
 		EA9BE36F20B432170014450F /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9BE36E20B432170014450F /* RandomViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3C05811720A1ABF600184FBA /* LifePointCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePointCalcUITests.swift; sourceTree = "<group>"; };
 		3C05811920A1ABF700184FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C05812520A1C5F600184FBA /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		3C9F261B20BB0ED4001AFD87 /* historyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
 		EA9BE36E20B432170014450F /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 		3C0580F620A1ABE900184FBA /* LifePointCalc */ = {
 			isa = PBXGroup;
 			children = (
+				3C9F261B20BB0ED4001AFD87 /* historyViewController.swift */,
 				3C0580F720A1ABE900184FBA /* AppDelegate.swift */,
 				3C0580F920A1ABE900184FBA /* ViewController.swift */,
 				3C0580FB20A1ABE900184FBA /* Main.storyboard */,
@@ -266,6 +269,7 @@
 				EA9BE36F20B432170014450F /* RandomViewController.swift in Sources */,
 				3C0580F820A1ABE900184FBA /* AppDelegate.swift in Sources */,
 				3C05812620A1C5F600184FBA /* mainViewController.swift in Sources */,
+				3C9F261C20BB0ED4001AFD87 /* historyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

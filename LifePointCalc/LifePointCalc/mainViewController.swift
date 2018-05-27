@@ -58,7 +58,6 @@ class mainViewController: UIViewController, UITextFieldDelegate {
             playerFourName.isHidden = false
             playerLifeFour.isHidden = false
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,6 +104,8 @@ class mainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buttonPlus: UIButton!
     @IBOutlet weak var buttonBack: UIButton!
     @IBOutlet weak var buttonClear: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
+    
     
     func loadCalc(){
         displayCalcValue.isHidden = false
@@ -121,6 +122,7 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         buttonMinus.isHidden = false
         buttonPlus.isHidden = false
         buttonClear.isHidden = false
+        historyButton.isHidden = true
     }
     
     func hideCalc(){
@@ -138,6 +140,7 @@ class mainViewController: UIViewController, UITextFieldDelegate {
         buttonMinus.isHidden = true
         buttonPlus.isHidden = true
         buttonClear.isHidden = true
+        historyButton.isHidden = false
     }
     
     @IBAction func numbers(_ sender: UIButton) {
